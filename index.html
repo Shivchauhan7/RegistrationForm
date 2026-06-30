@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="Stylesheet" href="style.css">
+<title>Create your account</title>
+
+</head>
+<body>
+
+<div class="card">
+  <p class="eyebrow">Step into the registry</p>
+  <h1>Create your account</h1>
+  <p class="sub">Every field marked <span class="req">*</span> is required. Validation runs as you type.</p>
+
+  <form id="regForm" novalidate>
+    <div class="field" data-field="fullName">
+      <label for="fullName">Full name <span class="req">*</span></label>
+      <input type="text" id="fullName" name="fullName" placeholder="Jordan Avery" autocomplete="name">
+      <p class="hint"></p>
+    </div>
+
+    <div class="field" data-field="username">
+      <label for="username">Username <span class="req">*</span></label>
+      <input type="text" id="username" name="username" placeholder="jordan_avery" autocomplete="username">
+      <p class="hint">3–20 characters: letters, numbers, underscores.</p>
+    </div>
+
+    <div class="field" data-field="email">
+      <label for="email">Email address <span class="req">*</span></label>
+      <input type="email" id="email" name="email" placeholder="jordan@example.com" autocomplete="email">
+      <p class="hint"></p>
+    </div>
+
+    <div class="field" data-field="phone">
+      <label for="phone">Phone number <span class="req">*</span></label>
+      <input type="tel" id="phone" name="phone" placeholder="+1 555 123 4567" autocomplete="tel">
+      <p class="hint">Include country code if outside your home country.</p>
+    </div>
+
+    <div class="field" data-field="dob">
+      <label for="dob">Date of birth <span class="req">*</span></label>
+      <input type="date" id="dob" name="dob">
+      <p class="hint">You must be 18 or older to register.</p>
+    </div>
+
+    <div class="field" data-field="password">
+      <label for="password">Password <span class="req">*</span></label>
+      <div class="pw-wrap">
+        <input type="password" id="password" name="password" placeholder="At least 8 characters" autocomplete="new-password">
+        <button type="button" class="toggle-pw" data-target="password">SHOW</button>
+      </div>
+      <div class="meter" id="pwMeter"><span></span><span></span><span></span><span></span></div>
+      <p class="hint">Use 8+ characters with a mix of case, a number and a symbol.</p>
+    </div>
+
+    <div class="field" data-field="confirmPassword">
+      <label for="confirmPassword">Confirm password <span class="req">*</span></label>
+      <div class="pw-wrap">
+        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter your password" autocomplete="new-password">
+        <button type="button" class="toggle-pw" data-target="confirmPassword">SHOW</button>
+      </div>
+      <p class="hint"></p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="checkbox-row">
+      <input type="checkbox" id="terms" name="terms">
+      <label for="terms">I agree to the Terms of Service and Privacy Policy <span class="req">*</span></label>
+    </div>
+    <p class="hint" id="termsHint" style="margin-top:-12px;"></p>
+
+    <button type="submit" id="submitBtn">Create account</button>
+  </form>
+
+  <div class="success" id="successPanel">
+    <div class="mark">&#10003;</div>
+    <h2>Account created</h2>
+    <p>Welcome aboard — a confirmation has been sent to your email.</p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
